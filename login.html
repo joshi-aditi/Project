@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>login page</title>
+    <style>
+        body {
+            font-size: large;
+            font-family: "Gill Sans", sans-serif;
+        }
+
+        .content {
+            margin: 150px auto;
+
+            width: 40%;
+            padding: 10px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-left: 5em;
+            padding-right: 5em;
+            padding-bottom: 0.4em;
+            background-color: #171717;
+            border-radius: 25px;
+            transition: .4s ease-in-out;
+        }
+
+        #heading {
+            text-align: center;
+            margin: 2em;
+            color: rgb(255, 255, 255);
+            font-size: 1.5em;
+        }
+
+        .field {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5em;
+            border-radius: 25px;
+            padding: 0.9em;
+            color: white;
+            background-color: #171717;
+            box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+        }
+
+        input {
+            font-size: 13px;
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            color: #d3d3d3;
+        }
+
+        .form .btn {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            margin-top: 2.5em;
+        }
+
+        .button1 {
+            font-size: 13px;
+            width: 45%;
+            padding: 0.5em;
+            padding-left: 1.1em;
+            padding-right: 1.1em;
+            border-radius: 5px;
+            margin-right: 0.5em;
+            border: none;
+            outline: none;
+            transition: .4s ease-in-out;
+            background-color: #252525;
+            color: white;
+        }
+
+        .button1:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .button2 {
+            float: right;
+            font-size: 13px;
+            width: 45%;
+            padding-left: 2.3em;
+            padding-right: 2.3em;
+            border-radius: 5px;
+            padding: 0.5em;
+            border: none;
+            outline: none;
+            transition: .4s ease-in-out;
+            background-color: #252525;
+            color: white;
+        }
+
+        .button2:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .button3 {
+            font-size: 13px;
+            height: 25px;
+            margin-bottom: 3em;
+            padding: 0.5em;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            transition: .4s ease-in-out;
+            background-color: #252525;
+            color: white;
+        }
+
+        .button3:hover {
+            background-color: rgb(118, 118, 118);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <form action="" method="">
+            <p id="heading">Login</p>
+            <div class="field">
+                <i class="fa fa-at" aria-hidden="true"></i>
+                <input autocomplete="off" placeholder="Username" class="input-field" type="text" width="16" height="16"
+                    fill="currentColor" viewBox="0 0 16 16">
+            </div>
+            <div class="field">
+                <i class="fa fa-lock" aria-hidden="true"></i>
+                <input placeholder="Password" class="input-field" type="password" width="16" height="16"
+                    fill="currentColor" viewBox="0 0 16 16">
+            </div>
+            <div class="btn">
+                <button class="button1" onclick="">Login </button>
+                <button class="button2" onclick="">Sign Up</button>
+            </div>
+            <button class="button3" onclick="">Forgot Password</button>
+        </form>
+    </div>
+</body>
+
+</html>

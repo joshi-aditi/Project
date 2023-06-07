@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud based book store management</title>
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+     <style>
+        /* .button{
+            border: 1px solid black;
+            display: none;
+            position: relative;
+            padding: 24px;
+            padding-bottom: -4px;
+            margin-left: 35px;
+        }
+        img:hover + .button{
+            display: inline-block;
+        } */
+            .button {
+                display: none;
+                border:1px solid #000000;
+                padding: 2px;
+                margin-left: 35px;
+                background-color: #78bf45;
+                text-decoration: dashed;
+                }
+            .wrapper:hover .button {
+            display: inline-block;
+            }
+     </style>
+
+</head>
+ 
+<script>
+    function home(){
+        location.replace("/index.html")
+    }
+</script>
+<body> 
+    <div class="navbar flex flex-row h-[130px] ">        
+        
+        <span>
+            <img src="img/logo.png" onclick="home()"  class="w-56 m-3 ml-4 mt-0 mb-0 hover:cursor-pointer" alt="website logo">
+        <span>
+
+        <div class=" relative  -top-20 left-80 ">
+                <input type="search"
+                    class="relative w-[550px] flex-auto rounded-l border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-neutral-700 outline-none focus:border-primary-600 focus:text-neutral-700 focus:shadow-te-primary focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200"
+                    placeholder="Title or author" aria-label="Search"  />
+            
+                <button 
+                    class="relative  rounded-r border-2 border-[#78bf45] px-[22px] py-[5.8px] pt-[8.8px] pb-[5.8px] -m-1  text-sm font-medium  text-primary hover:bg-green-400 hover:bg-opacity-5 focus:outline-none focus:ring-0"
+                    type="button" >
+                    Search
+                </button>
+        </div>
+
+        <div class="end relative flex left-[1000px] -top-[117px]">
+            <span class="sign in ml-10">
+                <a href="login.html" class="border-black outline-black p-6 font-semibold hover:text-green-600">Sign in</a>
+            </span>
+
+            <span class="ml-6">
+               <a href="wishlist.html">My-Wish_list</a>
+            </span>
+        </div>          
+        
+    </div>
+
+    <div class="flex  ">
+    <div class="left ml-14  w-[40vw]">
+
+        <div class="w-80  m-auto mt-4 mb-4">
+            <h1 class="text-[30px]  font-bold  text-center bg-[#78bf45] px-4 py-1 rounded-sm ">Book Of The Day</h1>
+        </div>
+
+        <div class="Bookofday flex outline-black w-96   ml-24 border-black  mt-8  content-center">
+        
+        <div class="right ">
+                 <img src="img/botd.jpg" class="-ml-4" alt="">
+        </div>
+
+        <div class="left m-auto">
+        <div class="ml-8">
+            <div class="text-center "> <p class="text-lg font-bold">All The Things I Didn't See</p> <br>
+            By - Cindy Sutherland <br>
+        <p class="font-semibold">
+            <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+        </p> </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="right   ml-20 mt-5 w-[50vw] ">
+        <div class="content-center ">
+        <h1 class="font-bold text-[30px]  bg-[#78bf45] w-80 text-center px-4 py-1 rounded-sm m-auto">All Genres :)</h1>
+        </div>
+
+        <div class="w-[20vw] flex  ml-[200px] mt-2">
+        <ul class="flex flex-wrap   mt-6 float-left ">
+            <li></li>
+
+            <div class="listitem ">
+            <li class="w-auto bg-[#91ea52a4] mx-2 my-2 hover:underline font-serif p-2  px-3 rounded-md text-sm "><a href="Fiction">Fiction</a></li></div>
+
+            <div class="listitem  ">
+            <li class="bg-[#91ea52a4] mx-2 my-2 hover:underline font-serif p-2 border-dashed px-3 rounded-md text-sm " ><a href="Mystery">Mystery</a></li></div>
+
+            <div class="listitem  ">
+            <li  class="bg-[#91ea52a4] mx-2 my-2 hover:underline font-serif p-2 border-dashed px-3 rounded-md text-sm"><a href="Horror">Horror</a></li></div>
+
+           <div class="listitem ">
+            <li class="bg-[#91ea52a4] mx-2 my-2 hover:underline font-serif p-2 border-dashed px-3 rounded-md text-sm"><a
+                    href="Vampire">Vampire</a></li>
+           </div>
+
+          <div class="listitem ">
+            <li class="bg-[#91ea52a4] mx-2 my-2 hover:underline font-serif p-2 border-dashed px-3 rounded-md text-sm"><a
+                    href="Comedy">Comedy</a></li>
+          </div>
+
+           <div class="listitem ">
+            <li class="bg-[#91ea52a4] mx-2 my-2 hover:underline font-serif p-2 border-dashed px-3 rounded-md text-sm"><a
+                    href="Drama">Drama</a></li>
+           </div>
+
+            <div class="llstitem ">
+                <li class="bg-[#91ea52a4] mx-2 my-2 hover:underline font-serif p-2 border-dashed px-3 rounded-md text-sm"><a
+                        href="Classic">Classic</a></li>
+            </div>
+
+           <div class="listitem ">
+            <li class="bg-[#91ea52a4] mx-2 my-2 font-serif hover:underline p-2 border-dashed px-3 rounded-md text-sm"><a
+                    href="Education">Education</a></li>
+           </div>
+            
+        </ul></div>
+
+        </div>
+    </div>
+
+
+    <div class="explore">
+    <div class="ml-3 bg-black w-[25vw] pl-2" >
+    <h1 class="text-2xl font-black font-serif p-4 mt-10 text-[#78bf45]">Let's Explore.....</h1>
+    </div>
+
+    <hr class="border border-black border-dashed w-[95vw] ml-8 mt-4 -mb-6">
+    <div class="categories flex space-x-32 m-auto w-[80vw]  border-dashed items-center p-[3.40rem]  ">
+        <div class="item1">
+            
+                <a href="#item1" > <img src="img/bestseller.png" class="w-[90px] h-[90px]" alt=""> Best Seller</a>
+        </div>
+
+        <div class="item2">
+            
+                <a href="#item2"><img src="img/newarri.png" class="w-[90px] h-[90px]" alt="">New Arrivals</a>
+
+        </div>
+
+        <div class="item3">
+           
+                <a href="item3"><img src="img/ondis.jfif" class="w-[90px] h-[90px]" alt="">On Discount</a>
+
+        </div>
+
+        <div class="item4">
+            
+                <a href="#item4" class=""><img src="img/top.jfif" class="w-[70px] h-[70px] mt-2 ml-4 mb-2 " alt="">Top Publication</a>
+
+        </div>
+
+        <div class="item5">
+            
+                <a href="#item5"><img src="img/exam.png" class="w-[70px] h-[70px] mt-3 mb-1" alt="">Exam Central</a>
+
+        </div>
+    </div>
+    <hr class="border border-black border-dashed w-[95vw] ml-8 -mt-4">
+    <br>
+    <br>
+    </div>
+
+    
+
+    <div class="trending w-[95vw]  border-dashed h-[370px] ml-8 mb-[2.5rem] ">
+
+    <div class="bg-[#78bf45] p-2 w-[30vw] m-auto">
+        <h1 class="text-2xl text-center font-bold">~ Now Trending ~</h1>
+    </div>
+
+    <div class="flex flex-row space-x-20 ml-12  p-7 h-[370px] mb-5 ">
+        <div class="t1 w-[12vw] h-[40vh] wrapper ">
+             <img src="img/t1pp.jpg" class="m-auto w-[400px] h-[300px] border border-black shadow-inner p-2 " alt="" >
+             <button class="hidden"></button>
+             <a class="button" href="t1.html">Quick View</a>
+            <!-- <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Spare</p>
+                By - Prince Harry
+                <p class="font-semibold">
+               <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10</p>
+            </div> -->
+        </div>
+
+        <div class="t2 w-[12vw] h-[40vh]  "> 
+            <img src="img/t2.jpg" class="mt-14 ml-3 w-[150px] h-[200px] border border-black p-1" alt="">
+            <!-- <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">The Boys From Biloxi</p>
+                By - John Grisham
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 7/10
+                </p>
+            </div> -->
+        </div>
+
+        
+        <div class="t3 w-[12vw] h-[40vh] ">
+            <img src="img/t3.jpg" class="mt-14 ml-3 w-[150px] h-[200px] border border-black p-1" alt="">
+            <!-- <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Mad Honey</p>
+                By - Jodi Picoult
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div> -->
+        </div>
+        
+        <div class="t4 w-[12vw] h-[40vh]  ">
+            <img src="img/t4.jpg" class="mt-14 ml-3 w-[150px] h-[200px] border border-black p-1" alt="">
+            <!-- <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Dreamland</p>
+                By - Nicholas Sparks
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div> -->
+        </div>
+        <div class="t5 w-[12vw] h-[40vh] ">
+            <img src="img/t5.jpg" class="m-auto w-[600px] h-[300px] border border-black shadow-inner p-2" alt="">
+            <!-- <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Ugly Love</p>
+                By - Colleen Hoover
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 7/10
+                </p>
+            </div> -->
+        </div>
+    </div>
+    <br>
+    </div>
+
+
+
+    <div id="item1 bestseller">
+       <div class="bestseller ml-0">
+        <h1 class="text-3xl font-black mb-2 underline space-y-1 ml-4">Best Sellers :</h1>
+       </div>
+    <div class="flex flex-row space-x-20 ml-[77px]  p-7 h-[450px] mt-10 mb-5">
+        <div class="t1 w-[12vw] h-[40vh] wrapper ">
+            <img src="img/bs1.jpg" class="m-auto w-[500px] "  alt="">
+            <button class="hidden"></button>
+            <a class="button" href="bs1.html">Quick View</a>
+            
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">It ends with us</p>
+                By - Collen Hoover
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t2 w-[12vw] h-[40vh]  ">
+            <img src="img/bs2.jpg" class="m-auto w-[500px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Ikigai</p>
+                By - France Miralles
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+    
+        <div class="t3 w-[12vw] h-[40vh] ">
+            <img src="img/bs3.jpg" class="m-auto w-[500px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Atomic Habit</p>
+                By - James Clear
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t4 w-[12vw] h-[40vh]  ">
+            <img src="img/bs4.jpg" class="m-auto w-[500px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">It stars with us</p>
+                By - Colleen Hoover
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+        <div class="t5 w-[12vw] h-[40vh] ">
+            <img src="img/bs5.jpg" class="m-auto w-[500px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Do it today</p>
+                By - Darius Foroux
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9.5/10
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="item2 newarri">
+       <div class="newarri ml-5">
+        <h1 class="text-3xl font-black mb-2">New Arrivals :</h1>
+       </div>
+    <div class="flex flex-row space-x-20 ml-[77px]  p-7 h-[350px] ">
+        <div class="t1 w-[12vw] h-[40vh] ">
+            <img src="img/a1.jpg" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Harry Potter</p>
+                By - Au
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t2 w-[12vw] h-[40vh]  ">
+            <img src="img/a2.jpg" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">HBR's 10 Must Reads 2023</p>
+                By - Adam M. Grant
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+    
+        <div class="t3 w-[12vw] h-[40vh] ">
+            <img src="img/a3.jpg" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">GK Manual 2022</p>
+                By - Edgar Thorpe and Showick Thorpe
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t4 w-[12vw] h-[40vh]  ">
+            <img src="img/a4.jpg" class="m-auto" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Nomads</p>
+                By - Anthony Sattin
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+        <div class="t5 w-[12vw] h-[40vh] ">
+            <img src="img/a5.jpg" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Stellarlune</p>
+                By - Shannon
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9.5/10
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="item3 Ondiscout">
+       <div class="Ondiscout ml-5">
+        <h1 class="text-3xl font-black mb-2">On 40% Discount :</h1>
+       </div>
+    <div class="flex flex-row space-x-20 ml-[77px]  p-7 h-[350px] ">
+        <div class="t1 w-[12vw] h-[40vh] ">
+            <img src="img/d1.jpg" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Metamorphosis</p>
+                By - Franz Kafka
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t2 w-[12vw] h-[40vh]  ">
+            <img src="img/d2.jpg" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Who Moved My Cheese</p>
+                By - Dr Spencer Johnson
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+    
+        <div class="t3 w-[12vw] h-[40vh] ">
+            <img src="img/d3.jpg" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Meditations</p>
+                By - Marcus Aurelius
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t4 w-[12vw] h-[40vh]  ">
+            <img src="img/d4.jpg" class="m-auto" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Memory</p>
+                By - William Walker Atkinson
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+        <div class="t5 w-[12vw] h-[40vh] ">
+            <img src="img/d5.jpg" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">The Secret Garden</p>
+                By - Frances
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9.5/10
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="item4 top_Publi">
+       <div class="top_Publi ml-5">
+        <h1 class="text-3xl font-black mb-2">Top Publication :</h1>
+       </div>
+    <div class="flex flex-row space-x-20 ml-[77px]  p-7 h-[350px] ">
+        <div class="t1 w-[12vw] h-[40vh] ">
+            <img src="img/p1.jpg" class="m-auto w-[125px] h-[200px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Publiser : Srishti</p>
+                By - Collen Hoover
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t2 w-[12vw] h-[40vh]  ">
+            <img src="img/p2.jpg" class="m-auto w-[125px] h-[200px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Publiser : Rupa</p>
+                By - France Miralles
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+    
+        <div class="t3 w-[12vw] h-[40vh] ">
+            <img src="img/p3.jpg" class="m-auto w-[125px] h-[200px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Publiser : Mehta</p>
+                By - James Clear
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t4 w-[12vw] h-[40vh]  ">
+            <img src="img/p4.jpg" class="m-auto w-[125px] h-[200px]" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Publiser : HarperCollins</p>
+                By - Colleen Hoover
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+        <div class="t5 w-[12vw] h-[40vh] ">
+            <img src="img/p5.jpg" class="m-auto w-[125px] h-[200px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Publiser : Manohar</p>
+                By - Darius Foroux
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9.5/10
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div id="item5 Examcenteral">
+       <div class="Examcenteral ml-5">
+        <h1 class="text-3xl font-black mb-2">Exam Central :</h1>
+       </div>
+    <div class="flex flex-row space-x-20 ml-[77px]  p-7 h-[350px] ">
+        <div class="t1 w-[12vw] h-[40vh] ">
+            <img src="img/e1.jpg" class="m-auto w-[125px] h-[200px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">It ends with us</p>
+                By - Collen Hoover
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t2 w-[12vw] h-[40vh]  ">
+            <img src="img/e2.jpg" class="m-auto w-[125px] h-[200px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Ikigai</p>
+                By - France Miralles
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+    
+        <div class="t3 w-[12vw] h-[40vh] ">
+            <img src="img/e3.jpg" class="m-auto w-[125px] h-[200px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Atomic Habit</p>
+                By - James Clear
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9/10
+                </p>
+            </div>
+        </div>
+    
+        <div class="t4 w-[12vw] h-[40vh]  ">
+            <img src="img/e4.jpg" class="m-auto w-[125px] h-[200px]" class="m-auto" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">It stars with us</p>
+                By - Colleen Hoover
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 8/10
+                </p>
+            </div>
+        </div>
+        <div class="t5 w-[12vw] h-[40vh] ">
+            <img src="img/e5.jpg" class="m-auto w-[125px] h-[200px]" alt="">
+            <div class="text-center ">
+                <p class="text-lg font-mono font-semibold">Do it today</p>
+                By - Darius Foroux
+                <p class="font-semibold">
+                    <img src="img/rating.jfif" class="w-[12px] inline-block" alt=""> 9.5/10
+                </p>
+            </div>
+        </div>
+    </div>
+    <br>
+    </div>
+
+    <div class="footer">
+
+        <hr class="border w-[95vw] ml-5"> 
+    
+        <footer>
+            <p class="font-serif text-sm text-center p-4">© Cloud Based Book Store - all rights are reserved.</p>
+        </footer>
+    </div>
+     
+</body>
+
+</html>
+<!-- //one nav bar 
+//book of the day big div
+//div containing some of the options for users to select from
+// now trending div
+// one by one above to above div's content in separate div
+// footer for the copyright ..... -->
+
